@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq50g0wrbivy4"]
+
+[ext_resource type="Texture2D" uid="uid://culmad3urtxp2" path="res://Imagenes_Fondos/CAMPAMENTO_BACKGROUND.jpg" id="1_a7gpn"]
+[ext_resource type="Texture2D" uid="uid://dmirhenwoe6ls" path="res://Imagenes_Personajes/EMILY_NORMAL_PNG.png" id="2_6oh7i"]
+[ext_resource type="Texture2D" uid="uid://bh2anl3thgb4p" path="res://Imagenes_Personajes/EMILY_DUDOSA_PNG.png" id="3_vlbhd"]
+[ext_resource type="Texture2D" uid="uid://dajcds7u5ocni" path="res://Imagenes_Personajes/EMILY_TRISTE_PNG.png" id="4_vib4o"]
+
+[node name="CHAPTER_1" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="FONDO" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(2, 1)
+texture = ExtResource("1_a7gpn")
+centered = false
+
+[node name="PERSONAJES" type="Node2D" parent="."]
+
+[node name="EMILY_1" type="Node2D" parent="PERSONAJES"]
+
+[node name="EMILY_NORMAL" type="Sprite2D" parent="PERSONAJES/EMILY_1"]
+visible = false
+position = Vector2(394, 262)
+scale = Vector2(0.523607, 0.54079)
+texture = ExtResource("2_6oh7i")
+
+[node name="EMILY_DUDOSA" type="Sprite2D" parent="PERSONAJES/EMILY_1"]
+position = Vector2(394, 231)
+scale = Vector2(0.761549, 0.718792)
+texture = ExtResource("3_vlbhd")
+
+[node name="EMILY_TRISTE" type="Sprite2D" parent="PERSONAJES/EMILY_1"]
+visible = false
+position = Vector2(348, 247)
+scale = Vector2(0.610054, 0.623474)
+texture = ExtResource("4_vib4o")

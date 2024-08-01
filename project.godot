@@ -13,3 +13,10 @@ config_version=5
 config/name="Prueba_1"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=640
+window/size/window_height_override=360
