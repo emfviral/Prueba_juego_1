@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cq50g0wrbivy4"]
+[gd_scene load_steps=7 format=3 uid="uid://cq50g0wrbivy4"]
 
-[ext_resource type="Texture2D" uid="uid://culmad3urtxp2" path="res://Imagenes_Fondos/CAMPAMENTO_BACKGROUND.jpg" id="1_a7gpn"]
+[ext_resource type="Texture2D" uid="uid://nii8lw68a7w4" path="res://Imagenes_Fondos/Fondo_INICIO.jpg" id="1_qsrs6"]
 [ext_resource type="Texture2D" uid="uid://dmirhenwoe6ls" path="res://Imagenes_Personajes/EMILY_NORMAL_PNG.png" id="2_6oh7i"]
 [ext_resource type="Texture2D" uid="uid://bh2anl3thgb4p" path="res://Imagenes_Personajes/EMILY_DUDOSA_PNG.png" id="3_vlbhd"]
 [ext_resource type="Texture2D" uid="uid://dajcds7u5ocni" path="res://Imagenes_Personajes/EMILY_TRISTE_PNG.png" id="4_vib4o"]
+[ext_resource type="Texture2D" uid="uid://8n4uy4af776x" path="res://Imagenes_Dialogos/cuadro_texto_terror.png" id="5_va7uk"]
+[ext_resource type="Texture2D" uid="uid://2aaixjgtkxgj" path="res://Imagenes_Dialogos/Cuadro_Nombre.png" id="6_r3cgj"]
 
 [node name="CHAPTER_1" type="Node2D"]
 
@@ -12,8 +14,8 @@
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="FONDO" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(2, 1)
-texture = ExtResource("1_a7gpn")
+position = Vector2(-2, 2)
+texture = ExtResource("1_qsrs6")
 centered = false
 
 [node name="PERSONAJES" type="Node2D" parent="."]
@@ -22,17 +24,63 @@ centered = false
 
 [node name="EMILY_NORMAL" type="Sprite2D" parent="PERSONAJES/EMILY_1"]
 visible = false
-position = Vector2(394, 262)
-scale = Vector2(0.523607, 0.54079)
+position = Vector2(1045, 521)
+scale = Vector2(1.21833, 1.32467)
 texture = ExtResource("2_6oh7i")
 
 [node name="EMILY_DUDOSA" type="Sprite2D" parent="PERSONAJES/EMILY_1"]
-position = Vector2(394, 231)
-scale = Vector2(0.761549, 0.718792)
+position = Vector2(1058, 497)
+scale = Vector2(1.69582, 1.60032)
 texture = ExtResource("3_vlbhd")
 
 [node name="EMILY_TRISTE" type="Sprite2D" parent="PERSONAJES/EMILY_1"]
 visible = false
-position = Vector2(348, 247)
-scale = Vector2(0.610054, 0.623474)
+position = Vector2(998, 572)
+scale = Vector2(1.15863, 1.25356)
 texture = ExtResource("4_vib4o")
+
+[node name="DIALOGOS_BASE" type="Node2D" parent="."]
+
+[node name="CuadroTextoTerror" type="Sprite2D" parent="DIALOGOS_BASE"]
+position = Vector2(1027, 937)
+scale = Vector2(1.48125, 1.135)
+texture = ExtResource("5_va7uk")
+
+[node name="CuadroNombre" type="Sprite2D" parent="DIALOGOS_BASE"]
+position = Vector2(585, 810.5)
+scale = Vector2(0.1268, 0.1268)
+texture = ExtResource("6_r3cgj")
+
+[node name="CONTROL_DIALOGOS" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EMILY" type="Control" parent="CONTROL_DIALOGOS"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CONTROL_DIALOGOS/EMILY"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CONTROL_DIALOGOS/EMILY"]
+
+[node name="CAJA_NOMBRES" type="Control" parent="CONTROL_DIALOGOS"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CONTROL_DIALOGOS/CAJA_NOMBRES"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SONIDOS" type="Node" parent="."]
+
+[node name="Musica_Menu" type="AudioStreamPlayer" parent="SONIDOS"]
+
+[node name="Musica_Fondo" type="AudioStreamPlayer" parent="SONIDOS"]

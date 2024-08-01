@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://culmad3urtxp2"
-path="res://.godot/imported/CAMPAMENTO_BACKGROUND.jpg-7176a3511d03cd1a95e1328c6a692b9f.ctex"
+uid="uid://2aaixjgtkxgj"
+path="res://.godot/imported/Cuadro_Nombre.png-79583dc56c7cf2e5a4795ce72aaa1a0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes_Fondos/CAMPAMENTO_BACKGROUND.jpg"
-dest_files=["res://.godot/imported/CAMPAMENTO_BACKGROUND.jpg-7176a3511d03cd1a95e1328c6a692b9f.ctex"]
+source_file="res://Imagenes_Dialogos/Cuadro_Nombre.png"
+dest_files=["res://.godot/imported/Cuadro_Nombre.png-79583dc56c7cf2e5a4795ce72aaa1a0f.ctex"]
 
 [params]
 
